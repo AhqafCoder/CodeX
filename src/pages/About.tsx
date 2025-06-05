@@ -2,70 +2,63 @@ import { Separator } from "@/components/ui/separator"
 
 export default function About() {
   return (
-    <div className="container py-12 md:py-16">
-      <div className="mx-auto max-w-4xl space-y-8">
-        <div className="space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">About CodeX</h1>
-          <p className="text-xl text-muted-foreground">
-            A community of passionate students dedicated to exploring and advancing technology.
+    <div className="container py-12">
+      <h1 className="mb-8 text-4xl font-bold">About CodeX</h1>
+      
+      <div className="space-y-8">
+        <section>
+          <h2 className="mb-4 text-2xl font-semibold">Our Mission</h2>
+          <p className="text-muted-foreground">
+            At CodeX, our mission is to empower students with the knowledge and skills needed to thrive in the world of technology. We believe in learning by doing, collaboration, and innovation.
           </p>
-        </div>
+          <p className="mt-4 text-muted-foreground">
+            Founded in 2023 by a group of passionate computer science students, CodeX has grown into a vibrant community of over 200 members from various academic disciplines. We're dedicated to making technology accessible to everyone, regardless of their background or prior experience.
+          </p>
+        </section>
         
         <Separator />
         
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="text-2xl font-bold">Our Mission</h2>
-            <p className="mt-4 text-muted-foreground">
-              At CodeX, our mission is to foster a collaborative environment where students can learn, 
-              experiment, and innovate in the fields of programming and robotics. We aim to bridge the 
-              gap between theoretical knowledge and practical application, preparing our members for 
-              future careers in technology.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold">Our Vision</h2>
-            <p className="mt-4 text-muted-foreground">
-              We envision a community where every student, regardless of their background or experience level, 
-              has the opportunity to explore their interest in technology. Through mentorship, resources, and 
-              hands-on projects, we strive to cultivate the next generation of tech leaders and innovators.
-            </p>
-          </div>
-        </div>
+        <section>
+          <h2 className="mb-4 text-2xl font-semibold">Our Vision</h2>
+          <p className="text-muted-foreground">
+            We envision a community where students from all backgrounds can come together to learn, create, and innovate. Our goal is to bridge the gap between academic learning and real-world applications.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            By fostering a supportive environment for experimentation and growth, we aim to prepare our members for successful careers in technology and empower them to solve real-world problems through creative applications of technology.
+          </p>
+        </section>
+
+        <Separator />
         
-        <div className="overflow-hidden rounded-lg border">
-          <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Team collaboration" 
-            className="w-full object-cover md:h-[400px]" 
-          />
-        </div>
-        
-        <div>
-          <h2 className="text-2xl font-bold">What We Do</h2>
-          <ul className="mt-4 space-y-4 text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <span className="text-primary">•</span>
-              <span>Organize weekly coding workshops and tutorials</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary">•</span>
-              <span>Develop robotics projects and participate in competitions</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary">•</span>
-              <span>Host hackathons and collaborative coding events</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary">•</span>
-              <span>Invite industry professionals for talks and networking sessions</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary">•</span>
-              <span>Provide resources and mentorship for personal projects</span>
-            </li>
-          </ul>
-        </div>
+        <section>
+          <h2 className="mb-4 text-2xl font-semibold">Our Values</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg border p-4">
+              <h3 className="mb-2 text-lg font-medium">Inclusivity</h3>
+              <p className="text-sm text-muted-foreground">We welcome members from all backgrounds, majors, and skill levels. Diversity drives innovation.</p>
+            </div>
+            <div className="rounded-lg border p-4">
+              <h3 className="mb-2 text-lg font-medium">Hands-on Learning</h3>
+              <p className="text-sm text-muted-foreground">We believe in practical, project-based learning that builds real-world skills.</p>
+            </div>
+            <div className="rounded-lg border p-4">
+              <h3 className="mb-2 text-lg font-medium">Collaboration</h3>
+              <p className="text-sm text-muted-foreground">We foster teamwork and peer learning, creating a supportive community.</p>
+            </div>
+            <div className="rounded-lg border p-4">
+              <h3 className="mb-2 text-lg font-medium">Innovation</h3>
+              <p className="text-sm text-muted-foreground">We encourage creative thinking and novel approaches to problem-solving.</p>
+            </div>
+            <div className="rounded-lg border p-4">
+              <h3 className="mb-2 text-lg font-medium">Mentorship</h3>
+              <p className="text-sm text-muted-foreground">We provide guidance from experienced peers and industry professionals.</p>
+            </div>
+            <div className="rounded-lg border p-4">
+              <h3 className="mb-2 text-lg font-medium">Community Impact</h3>
+              <p className="text-sm text-muted-foreground">We aim to use technology to make a positive difference in our campus and beyond.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )
