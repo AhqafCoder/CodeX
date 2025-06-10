@@ -4,8 +4,11 @@ import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { useForm, ValidationError } from '@formspree/react'
 
 export default function Contact() {
+  const [state, handleSubmit] = useForm("xeokawna")
+
   return (
     <div className="container py-12 md:py-16">
       <div className="mx-auto max-w-4xl space-y-8">
@@ -27,21 +30,33 @@ export default function Contact() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">Name</label>
-                  <Input id="name" placeholder="Your name" />
+              {state.succeeded ? (
+                <div className="text-center py-4">
+                  <h3 className="text-lg font-medium text-green-600 mb-2">Message Sent!</h3>
+                  <p className="text-muted-foreground">Thank you for contacting us. We'll get back to you soon.</p>
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">Email</label>
-                  <Input id="email" type="email" placeholder="Your email" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">Message</label>
-                  <Textarea id="message" placeholder="Your message" rows={5} />
-                </div>
-                <Button type="submit" className="w-full">Send Message</Button>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium">Name</label>
+                    <Input id="name" name="name" placeholder="Your name" required />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium">Email</label>
+                    <Input id="email" name="email" type="email" placeholder="Your email" required />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium">Message</label>
+                    <Textarea id="message" name="message" placeholder="Your message" rows={5} required />
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                  </div>
+                  <Button type="submit" className="w-full" disabled={state.submitting}>
+                    {state.submitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
           
@@ -74,8 +89,6 @@ export default function Contact() {
                 </div>
               </CardContent>
             </Card>
-            
-           
           </div>
         </div>
       </div>

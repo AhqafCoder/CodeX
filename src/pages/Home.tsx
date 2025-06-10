@@ -38,7 +38,7 @@ export default function Home() {
             Empowering students through coding and robotics innovation at our university.
           </p>
           <p className="mx-auto max-w-[800px] text-muted-foreground animate-fade-in-up delay-200">
-            Founded in 2023, CodeX is a student-led tech community dedicated to fostering innovation, collaboration, and technical excellence.
+            Founded in 2025, CodeX is a student-led tech community dedicated to fostering innovation, collaboration, and technical excellence.
             Our members range from beginners to advanced developers, all united by a passion for technology.
           </p>
         </div>
