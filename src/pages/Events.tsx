@@ -1,29 +1,33 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Calendar } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Calendar, Clock, MapPin } from "lucide-react"
 
 export default function Events() {
   const events = [
     {
-      title: "Introduction to Machine Learning Workshop",
-      date: "June 15, 2024",
-      time: "2:00 PM - 4:00 PM",
-      location: "Engineering Building, Room 302",
-      description: "Learn the basics of machine learning algorithms and how to implement them using Python and scikit-learn."
+      title: "Robotics Workshop",
+      date: "March 15, 2024",
+      time: "2:00 PM - 5:00 PM",
+      location: "Engineering Lab 201",
+      description: "Hands-on workshop learning to build and program autonomous robots.",
+      category: "Workshop",
     },
     {
-      title: "Hackathon: Build a Web App in 24 Hours",
-      date: "July 10-11, 2024",
-      time: "Starts at 9:00 AM",
-      location: "Student Center, Main Hall",
-      description: "Join us for an exciting 24-hour hackathon where you'll build a web application from scratch in teams."
+      title: "Coding Competition",
+      date: "March 20, 2024",
+      time: "10:00 AM - 4:00 PM",
+      location: "Computer Science Building",
+      description: "Annual coding competition with prizes for top performers.",
+      category: "Competition",
     },
     {
-      title: "Guest Speaker: Innovations in Robotics",
-      date: "August 5, 2024",
-      time: "5:30 PM - 7:00 PM",
-      location: "Science Building, Auditorium",
-      description: "A special talk by Dr. Jane Smith from RoboTech Industries on the latest innovations in robotics and AI."
+      title: "Tech Talk: AI in Healthcare",
+      date: "March 25, 2024",
+      time: "3:00 PM - 4:30 PM",
+      location: "Auditorium A",
+      description: "Guest speaker discussing the latest applications of AI in healthcare.",
+      category: "Seminar",
     },
   ]
 
@@ -33,27 +37,40 @@ export default function Events() {
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Upcoming Events</h1>
           <p className="text-xl text-muted-foreground">
-            Join us for workshops, hackathons, and tech talks throughout the year.
+            Join us at our upcoming events and activities.
           </p>
         </div>
         
         <Separator />
         
-        <div className="space-y-6">
+        <div className="grid gap-6">
           {events.map((event, index) => (
             <Card key={index}>
               <CardHeader>
-                <CardTitle>{event.title}</CardTitle>
-                <CardDescription className="flex items-center gap-1">
-                  <Calendar className="h-4 w-4" /> {event.date} • {event.time}
-                </CardDescription>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>{event.title}</CardTitle>
+                    <CardDescription className="mt-2">{event.description}</CardDescription>
+                  </div>
+                  <Badge variant="secondary">{event.category}</Badge>
+                </div>
               </CardHeader>
               <CardContent>
-                <p>{event.description}</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4 text-primary" />
+                    <span className="text-sm">{event.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-4 w-4 text-primary" />
+                    <span className="text-sm">{event.time}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-primary" />
+                    <span className="text-sm">{event.location}</span>
+                  </div>
+                </div>
               </CardContent>
-              <CardFooter>
-                <p className="text-sm font-medium">Location: {event.location}</p>
-              </CardFooter>
             </Card>
           ))}
         </div>

@@ -4,9 +4,9 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
+import Events from "./pages/Events"
 
 // Temporary placeholder components until we create the full pages
-const Events = () => <div className="container py-12"><h1 className="text-4xl font-bold">Events</h1><p className="mt-4">Upcoming events will be displayed here soon.</p></div>
 const Resources = () => <div className="container py-12"><h1 className="text-4xl font-bold">Resources</h1><p className="mt-4">Resources will be available here soon.</p></div>
 
 function App() {
