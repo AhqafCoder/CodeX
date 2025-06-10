@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Layout from "./components/layout/Layout"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import Projects from "./pages/Projects"
+import Contact from "./pages/Contact"
 
 // Temporary placeholder components until we create the full pages
-const Projects = () => <div className="container py-12"><h1 className="text-4xl font-bold">Projects</h1><p className="mt-4">Our projects will be displayed here soon.</p></div>
 const Events = () => <div className="container py-12"><h1 className="text-4xl font-bold">Events</h1><p className="mt-4">Upcoming events will be displayed here soon.</p></div>
 const Resources = () => <div className="container py-12"><h1 className="text-4xl font-bold">Resources</h1><p className="mt-4">Resources will be available here soon.</p></div>
-const Contact = () => <div className="container py-12"><h1 className="text-4xl font-bold">Contact Us</h1><p className="mt-4">Contact information will be available here soon.</p></div>
 
 function App() {
   return (

@@ -75,27 +75,7 @@ export default function Contact() {
               </CardContent>
             </Card>
             
-            <Card>
-              <CardHeader>
-                <CardTitle>Office Hours</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>10:00 AM - 6:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>12:00 PM - 4:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+           
           </div>
         </div>
       </div>
