@@ -11,9 +11,7 @@ export default function About() {
           <p className="text-muted-foreground">
             At CodeX, our mission is to empower students with the knowledge and skills needed to thrive in the world of technology. We believe in learning by doing, collaboration, and innovation.
           </p>
-          <p className="mt-4 text-muted-foreground">
-            Founded in 2023 by a group of passionate computer science students, CodeX has grown into a vibrant community of over 200 members from various academic disciplines. We're dedicated to making technology accessible to everyone, regardless of their background or prior experience.
-          </p>
+          
         </section>
         
         <Separator />

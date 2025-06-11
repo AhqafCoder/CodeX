@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, Code, Cpu, Lightbulb, Users, Sparkles, ChevronRight } from "lucide-react"
-
+import { TypewriterText } from "@/components/ui/TypewriterText"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator" // Added Separator import
+import { Separator } from "@/components/ui/separator"
 
 export default function Home() {
   return (
@@ -24,18 +24,13 @@ export default function Home() {
       <div className="fixed bottom-[20%] right-[20%] w-24 h-24 sm:w-32 sm:h-32 border border-primary/5 rounded-full -z-20 animate-spin-slow"></div>
       
       {/* Hero Section */}
-      <section className="container flex flex-col items-center gap-8 text-center relative">
-        <Badge variant="secondary" className="mb-2 animate-fade-in">
-          <Sparkles className="h-3.5 w-3.5 mr-1" />
-          <span>Student-Led Innovation Hub</span>
-        </Badge>
-        
-        <div className="space-y-6">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 animate-fade-in-up">
-            Welcome to <span className="font-extrabold">CodeX</span>
+      <section className="container px-4 md:px-6 flex flex-col items-center justify-center gap-4 text-center pt-12 md:pt-24">
+        <div className="flex flex-col items-center gap-4 max-w-[64rem] mx-auto">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <TypewriterText text="Welcome to CodeX" delay={150} />
           </h1>
-          <p className="mx-auto max-w-[700px] text-lg text-foreground/80 md:text-xl animate-fade-in-up delay-100">
-            Empowering students through coding and robotics innovation at our university.
+          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+            Empowering students through coding and robotics innovation. Join our community of tech enthusiasts and future innovators.
           </p>
           <p className="mx-auto max-w-[800px] text-muted-foreground animate-fade-in-up delay-200">
             Founded in 2025, CodeX is a student-led tech community dedicated to fostering innovation, collaboration, and technical excellence.

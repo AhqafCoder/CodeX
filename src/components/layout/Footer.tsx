@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Instagram, MessageSquare, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { ArrowRight, Github, Instagram, MessageSquare, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";

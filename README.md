@@ -148,3 +148,31 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 ---
 
 **Join us today and become part of the vibrant CodeX tech community!** 🌐
+
+## 🌐 Deployment
+
+### Deploying to Vercel
+
+1. Push your code to a GitHub repository
+
+2. Visit [Vercel](https://vercel.com) and sign in with GitHub
+
+3. Click "New Project" and import your repository
+
+4. Configure the project:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+
+5. Click "Deploy"
+
+Your site will be automatically deployed and you'll get a URL to access it.
+
+### Environment Variables
+
+If you need to add environment variables:
+
+1. Go to your project settings in Vercel
+2. Navigate to the "Environment Variables" tab
+3. Add your variables
