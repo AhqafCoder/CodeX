@@ -70,21 +70,21 @@ export default function Contact() {
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">codex@university.edu</p>
+                    <p className="text-muted-foreground">apanacodex@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">(123) 456-7890</p>
+                    <p className="text-muted-foreground">+91 7310458301</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
                   <div>
                     <h3 className="font-medium">Location</h3>
-                    <p className="text-muted-foreground">Engineering Building, Room 201<br />University Campus</p>
+                    <p className="text-muted-foreground">Invertis University, Bareilly, Himgiri<br />University Campus</p>
                   </div>
                 </div>
               </CardContent>

@@ -106,7 +106,6 @@ Use the navbar or footer to explore pages like:
 - About  
 - Projects  
 - Events  
-- Resources  
 - Contact  
 
 ### Customization

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { ArrowRight, Github, Instagram, MessageSquare, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -30,12 +30,7 @@ export default function Footer() {
                   <span className="sr-only">GitHub</span>
                 </a>
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full h-9 w-9 transition-colors hover:bg-primary hover:text-primary-foreground" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                  <Twitter className="h-4 w-4" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-              </Button>
+              
               <Button variant="outline" size="icon" className="rounded-full h-9 w-9 transition-colors hover:bg-primary hover:text-primary-foreground" asChild>
                 <a href="https://instagram.com" target="_blank" rel="noreferrer">
                   <Instagram className="h-4 w-4" />
@@ -43,9 +38,9 @@ export default function Footer() {
                 </a>
               </Button>
               <Button variant="outline" size="icon" className="rounded-full h-9 w-9 transition-colors hover:bg-primary hover:text-primary-foreground" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                  <Linkedin className="h-4 w-4" />
-                  <span className="sr-only">LinkedIn</span>
+                <a href="https://chat.whatsapp.com/HXQnlpYjI1tELYU2zUgCe7" target="_blank" rel="noreferrer">
+                  <MessageSquare className="h-4 w-4" />
+                  <span className="sr-only">WhatsApp</span>
                 </a>
               </Button>
             </div>
@@ -57,11 +52,11 @@ export default function Footer() {
             <nav aria-label="Quick links" className="flex flex-col space-y-2">
               <div className="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:gap-0">
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Home</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">About Us</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Programs</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Events</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Blog</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Contact</a>
+                <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">About Us</a>
+                <a href="/projects" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Programs</a>
+                <a href="/events" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Events</a>
+                <a href="/blog" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Blog</a>
+                <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Contact</a>
               </div>
             </nav>
           </div>
@@ -72,15 +67,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">123 Innovation Street, Tech City</span>
+                <span className="text-sm text-muted-foreground">Invertis University, Bareilly, Himgiri</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-sm text-muted-foreground">+91 7310458301</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">info@codex.edu</span>
+                <span className="text-sm text-muted-foreground">apanacodex@gmail.com</span>
               </div>
             </div>
           </div>

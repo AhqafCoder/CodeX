@@ -32,7 +32,6 @@ const navigationItems = [
   { title: "About", href: "/about", icon: <Info className="h-5 w-5" /> },
   { title: "Projects", href: "/projects", icon: <FolderKanban className="h-5 w-5" /> },
   { title: "Events", href: "/events", icon: <Calendar className="h-5 w-5" /> },
-  { title: "Resources", href: "/resources", icon: <BookOpen className="h-5 w-5" /> },
   { title: "Contact", href: "/contact", icon: <Mail className="h-5 w-5" /> },
 ]
 

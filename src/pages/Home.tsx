@@ -45,7 +45,7 @@ export default function Home() {
         
         <div className="flex flex-wrap items-center justify-center gap-4 mt-2 animate-fade-in-up delay-300">
           <Button asChild size="lg" className="group transition-all duration-300 transform hover:translate-y-[-2px]">
-            <Link to="/about" aria-label="Join the CodeX community">Join Us <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /></Link>
+            <Link to="https://chat.whatsapp.com/HXQnlpYjI1tELYU2zUgCe7" aria-label="Join the CodeX community">Join Us <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /></Link>
           </Button>
           <Button variant="outline" size="lg" asChild className="group transition-all duration-300 transform hover:translate-y-[-2px]">
             <Link to="/projects" aria-label="Explore CodeX projects">Explore Projects <ChevronRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" /></Link>

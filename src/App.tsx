@@ -6,9 +6,6 @@ import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import Events from "./pages/Events"
 
-// Temporary placeholder components until we create the full pages
-const Resources = () => <div className="container py-12"><h1 className="text-4xl font-bold">Resources</h1><p className="mt-4">Resources will be available here soon.</p></div>
-
 function App() {
   return (
     <Router>
@@ -18,7 +15,6 @@ function App() {
           <Route path="/projects" element={<Projects />} /> 
           <Route path="/about" element={<About />} /> 
           <Route path="/events" element={<Events />} /> 
-          <Route path="/resources" element={<Resources />} /> 
           <Route path="/contact" element={<Contact />} /> 
         </Routes>
       </Layout>
