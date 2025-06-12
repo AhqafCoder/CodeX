@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface TypewriterTextProps {
   text: string;
@@ -8,26 +8,23 @@ interface TypewriterTextProps {
 export function TypewriterText({ text, delay = 100 }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const audioContextRef = useRef<AudioContext | null>(null);
 
+  // Create an audio context and buffer for better performance
   const playTypeSound = useCallback(() => {
-    if (!audioContextRef.current) {
-      audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
-    }
-
-    const oscillator = audioContextRef.current.createOscillator();
-    const gainNode = audioContextRef.current.createGain();
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
 
     oscillator.connect(gainNode);
-    gainNode.connect(audioContextRef.current.destination);
+    gainNode.connect(audioContext.destination);
 
     oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(600, audioContextRef.current.currentTime);
-    gainNode.gain.setValueAtTime(0.025, audioContextRef.current.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContextRef.current.currentTime + 0.05);
+    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+    gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
 
     oscillator.start();
-    oscillator.stop(audioContextRef.current.currentTime + 0.05);
+    oscillator.stop(audioContext.currentTime + 0.1);
   }, []);
 
   useEffect(() => {
