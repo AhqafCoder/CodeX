@@ -2,17 +2,14 @@
 
 import * as React from "react"
 import { Link } from "react-router-dom"
-import { Home, Info, FolderKanban, Calendar, BookOpen, Mail, Menu, ChevronRight } from "lucide-react"
+import { Home, Info, FolderKanban, Calendar, Mail, Menu, ChevronRight } from "lucide-react"
 
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import {
