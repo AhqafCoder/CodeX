@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 text-lg font-bold">
+        <Link to="/" className="flex items-center gap-2 text-lg font-bold shrink-0">
           <Avatar className="h-8 w-8">
             <AvatarFallback className="bg-primary text-primary-foreground font-bold text-sm">CX</AvatarFallback>
           </Avatar>
@@ -52,7 +52,7 @@ export default function Navbar() {
             {navigationItems.map((item) => (
               <NavigationMenuItem key={item.title}>
                 <Link to={item.href}>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "px-3")}>
                     <span className="flex items-center gap-2">
                       {React.cloneElement(item.icon, { className: 'h-4 w-4 opacity-70' })}
                       {item.title}
@@ -67,7 +67,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon" className="rounded-full h-9 w-9 border-primary/20">
+            <Button variant="outline" size="icon" className="rounded-full h-9 w-9 border-primary/20 shrink-0">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle menu</span>
             </Button>

@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container mx-auto py-8 sm:py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8">
           {/* Logo and social media section */}
-          <div className="space-y-6 lg:col-span-1">
+          <div className="space-y-4">
             <div className="flex flex-col items-center md:items-start space-y-2">
               <Avatar className="size-12 mb-2">
                 <AvatarFallback className="bg-primary text-primary-foreground font-bold text-lg">CX</AvatarFallback>
@@ -37,6 +37,7 @@ export default function Footer() {
                   <span className="sr-only">Instagram</span>
                 </a>
               </Button>
+              
               <Button variant="outline" size="icon" className="rounded-full h-9 w-9 transition-colors hover:bg-primary hover:text-primary-foreground" asChild>
                 <a href="https://chat.whatsapp.com/HXQnlpYjI1tELYU2zUgCe7" target="_blank" rel="noreferrer">
                   <MessageSquare className="h-4 w-4" />
@@ -51,12 +52,12 @@ export default function Footer() {
             <h4 className="text-sm font-semibold tracking-wider uppercase text-center sm:text-left">Quick Links</h4>
             <nav aria-label="Quick links" className="flex flex-col space-y-2">
               <div className="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:gap-0">
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Home</a>
-                <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">About Us</a>
-                <a href="/projects" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Programs</a>
-                <a href="/events" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Events</a>
-                <a href="/blog" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Blog</a>
-                <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Contact</a>
+                <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Home</Link>
+                <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">About Us</Link>
+                <Link to="/projects" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Programs</Link>
+                <Link to="/events" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Events</Link>
+                <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Blog</Link>
+                <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left text-sm">Contact</Link>
               </div>
             </nav>
           </div>
@@ -81,7 +82,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter subscription card */}
-          <div className="lg:col-span-1">
+          <div className="w-full">
             <Card className="border-primary/10 shadow-md mx-auto sm:mx-0 max-w-sm w-full">
               <CardHeader className="pb-2">
                 <CardTitle className="text-center sm:text-left text-sm font-semibold tracking-wider uppercase">Newsletter</CardTitle>
@@ -111,17 +112,14 @@ export default function Footer() {
 
         <Separator className="my-8" />
         
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground px-4 sm:px-6 md:px-8">
-          <p className="text-center sm:text-left">© {new Date().getFullYear()} <span className="text-primary font-medium">CodeX</span>. All rights reserved.</p>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-6 md:px-8">
+          <p className="text-center sm:text-left text-sm">© {new Date().getFullYear()} <span className="text-primary font-medium">CodeX</span>. All rights reserved.</p>
           <div className="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
             <Link to="/" className="hover:text-foreground transition-colors text-xs">Privacy Policy</Link>
             <Link to="/" className="hover:text-foreground transition-colors text-xs">Terms of Service</Link>
             <Link to="/contact" className="hover:text-foreground transition-colors text-xs">Support</Link>
           </div>
         </div>
-        
-        
-          
       </div>
     </footer>
   );
