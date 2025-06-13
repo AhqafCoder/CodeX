@@ -32,10 +32,7 @@ export default function Home() {
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             Empowering students through coding and robotics innovation. Join our community of tech enthusiasts and future innovators.
           </p>
-          <p className="mx-auto max-w-[800px] text-muted-foreground animate-fade-in-up delay-200">
-            Founded in 2025, CodeX is a student-led tech community dedicated to fostering innovation, collaboration, and technical excellence.
-            Our members range from beginners to advanced developers, all united by a passion for technology.
-          </p>
+          
         </div>
         
         <div className="flex flex-wrap items-center justify-center gap-4 mt-2 animate-fade-in-up delay-300">
