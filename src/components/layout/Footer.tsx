@@ -67,7 +67,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">Invertis University, Bareilly, Himgiri</span>
+                <span className="text-sm text-muted-foreground">Himgiri, Invertis University, Bareilly</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
