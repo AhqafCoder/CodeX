@@ -5,20 +5,29 @@ import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import Events from "./pages/Events"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsOfService from "./pages/TermsOfService"
+import Support from "./pages/Support"
+import { ThemeProvider } from "./components/ThemeProvider"
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} /> 
-          <Route path="/about" element={<About />} /> 
-          <Route path="/events" element={<Events />} /> 
-          <Route path="/contact" element={<Contact />} /> 
-        </Routes>
-      </Layout>
-    </Router>
+    <ThemeProvider defaultTheme="dark">
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} /> 
+            <Route path="/about" element={<About />} /> 
+            <Route path="/events" element={<Events />} /> 
+            <Route path="/contact" element={<Contact />} /> 
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/support" element={<Support />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </ThemeProvider>
   )
 }
 

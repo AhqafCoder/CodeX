@@ -1,7 +1,5 @@
-
 @import "tailwindcss";
 @import "tw-animate-css";
-
 
 @custom-variant dark (&:is(.dark *));
 
@@ -76,7 +74,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-sans: "Space Mono", monospace;
 }
 
 .dark {
@@ -118,11 +115,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-sans);
+    @apply bg-background text-foreground font-['Roboto_Mono'];
   }
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
