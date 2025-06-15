@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, Menu, X, Code, Home, Calendar, Newspaper, Mail, Info, FolderKanban, Trophy, Layers, FileText, LifeBuoy, ArrowRight } from 'lucide-react';
+import { ChevronDown, Menu, X, Code, Home, Calendar, Newspaper, Mail,  Trophy, Layers, FileText, LifeBuoy, ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-  const toggleMoreDropdown = () => setIsMoreDropdownOpen(!isMoreDropdownOpen);
+ 
 
   const navItems = [
     { label: 'Home', href: '/', icon: Home },
@@ -79,13 +79,9 @@ const Navbar = () => {
 
               {/* Join Us Button (Desktop) */}
               <Link to="https://chat.whatsapp.com/HXQnlpYjI1tELYU2zUgCe7" aria-label="Join the CodeX community">
-                <Button 
-                  size="lg" 
-                  className="group bg-black text-white border border-gray-300/50 hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:translate-y-[-2px] rounded-2xl"
-                >
-                  Join Us 
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+              <Button asChild size="sm" className="group transition-all duration-300 transform hover:translate-y-[-2px]">
+                 <Link to="https://chat.whatsapp.com/HXQnlpYjI1tELYU2zUgCe7" aria-label="Join the CodeX community">Join Us <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /></Link>
+              </Button>
               </Link>
             </div>
 
