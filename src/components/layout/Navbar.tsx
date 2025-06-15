@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, Menu, X, Code, Home, Calendar, Newspaper, Mail,  Trophy, Layers, FileText, LifeBuoy, ArrowRight } from 'lucide-react';
+import { ChevronDown, Menu, X, Code, Home, Calendar, Newspaper, Mail, Trophy, Layers, FileText, LifeBuoy, ArrowRight, Users } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
@@ -19,6 +19,7 @@ const Navbar = () => {
   ];
 
   const moreItems = [
+    { label: 'Founders', href: '/founders', icon: Users },
     { label: 'Blog', href: '/blog', icon: Newspaper },
     { label: 'Resources', href: '/resources', icon: Layers },
     { label: 'Privacy Policy', href: '/privacy-policy', icon: FileText },
